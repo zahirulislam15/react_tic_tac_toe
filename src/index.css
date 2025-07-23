@@ -40,12 +40,9 @@ h1 {
 }
 
 button {
-  /* border-radius: 8px; */
   border: 1px solid #050505;
-  padding: 2em 2em;
   height: 4em;
   width: 4em;
-  /* margin: 2px; */
   font-size: 1em;
   font-weight: 600;
   font-family: inherit;
