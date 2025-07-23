@@ -15,9 +15,9 @@ function Board({ xIsNext, squares, currentMove, onPlay }) {
     }
     const nextSquares = squares.slice();
     if (xIsNext) {
-      nextSquares[i] = 'zahir';
+      nextSquares[i] = '1';
     } else {
-      nextSquares[i] = 'imran';
+      nextSquares[i] = '0';
     }
     onPlay(nextSquares);
   }
@@ -31,7 +31,7 @@ function Board({ xIsNext, squares, currentMove, onPlay }) {
     status = 'Match draw.'
   }
   if(currentMove != 9 && !winner) {
-    status = 'Next player: ' + (xIsNext ? 'zahir' : 'imran');
+    status = 'Next player: ' + (xIsNext ? '1' : '0');
   }
 
   return (
@@ -68,33 +68,11 @@ export default function Game() {
     setCurrentMove(nextHistory.length - 1);
   }
 
-  // function jumpTo(nextMove) {
-  //   setCurrentMove(nextMove);
-  // }
-
-  // const moves = history.map((squares, move) => {
-  //   let description;
-  //   if (move > 0) {
-  //     description = 'Go to move #' + move;
-  //   }
-  //   else {
-  //     description = 'Go to game start';
-  //   }
-  //   return (
-  //     <li key={move}>
-  //       <button onClick={() => jumpTo(move)}>{description}</button>
-  //     </li>
-  //   );
-  // });
-
   return (
     <div className="game">
       <div className="game-board">
         <Board xIsNext={xIsNext} squares={currentSquares} currentMove={currentMove} onPlay={handlePlay} />
       </div>
-      {/* <div className="game-info">
-        <ol>{moves}</ol>
-      </div> */}
     </div>
   );
 }
