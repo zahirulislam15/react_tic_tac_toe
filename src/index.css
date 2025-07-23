@@ -40,10 +40,12 @@ h1 {
 }
 
 button {
-  border-radius: 8px;
+  /* border-radius: 8px; */
   border: 1px solid #050505;
   padding: 2em 2em;
-  margin: 2px;
+  height: 4em;
+  width: 4em;
+  /* margin: 2px; */
   font-size: 1em;
   font-weight: 600;
   font-family: inherit;
@@ -57,11 +59,13 @@ button:hover {
 }
 button:focus,
 button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  outline: 2px auto -webkit-focus-ring-color;
 }
-/* .board-row{
-  height: 90px;
-} */
+.board-row{
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+}
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
